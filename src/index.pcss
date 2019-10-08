@@ -1,0 +1,18 @@
+html {
+    font-size: 62.5%;
+    font-family: $fontPrimary;
+    box-sizing: border-box;
+    scroll-behavior: smooth !important;
+}
+body {
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+    box-sizing: border-box;
+    background: linear-gradient(167.46deg, color(map(colors, bluegrey, 50) a(60%)) 0.93%, color(map(colors, bluegrey, 100) a(0%)) 23.66%);
+    background-repeat: no-repeat;
+
+    @mixin screen-sm-down {
+        background: none;
+    }
+}

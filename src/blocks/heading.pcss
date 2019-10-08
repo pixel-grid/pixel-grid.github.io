@@ -1,0 +1,45 @@
+.heading {
+    margin-top: 9px;
+    margin-bottom: calc($grid * 2);
+    padding-bottom: calc($grid * 1.5 - 1px);
+    position: relative;
+    text-align: center;
+    font-size: 32px;
+    line-height: 32px;
+    font-wieght: 600;
+    color: map(colors, grey, 900);
+
+    @mixin screen-md {
+        margin-top: 10px;
+    }
+    @mixin screen-sm-down {
+        margin-top: 8px;
+        padding-bottom: calc($grid * 1.5 - 1px);
+    }
+
+    &:after {
+        margin-left: calc($grid * 8.5 / -2);
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: calc($grid * 8.5);
+        height: 4px;
+        background-color: map(colors, amber, 300);
+    }
+
+    &__description {
+        margin-top: calc($grid);
+        margin-bottom: calc($grid * 10);
+        padding-top: 7px;
+        text-align: center;
+        font-size: 16px;
+        line-height: 24px;
+        font-wieght: 400;
+        color: map(colors, grey, 600);
+
+        @mixin screen-sm-down {
+            margin-bottom: calc($grid * 5);
+        }
+    }
+}

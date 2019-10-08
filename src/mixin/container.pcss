@@ -1,0 +1,53 @@
+@define-mixin container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: calc($grid * 2); /* 16px padding */
+    padding-right: calc($grid * 2); /* 16px padding */
+    width: calc(124px * 12 + $grid * 2 * 2); /* 124pxcolumn × 12 + 16px padding x2 */
+    min-width: 320px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    @mixin-content;
+
+    @media (--screen-xlg) {
+        width: calc(124px * 12 + $grid * 2 * 2); /* 124px column × 12 + 16px padding x2 */
+    }
+
+    @media (--screen-lg) {
+        width: calc(114px * 12 + $grid * 2 * 2); /* 114px column × 12 + 16px padding x2 */
+    }
+
+    @media (--screen-md) {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: $grid; /* 8px padding */
+        padding-right: $grid; /* 8px padding */
+        width: 100%;
+    }
+
+    @media (--screen-sm) {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: calc($grid * 1.5); /* 12px padding */
+        padding-right: calc($grid * 1.5); /* 12px padding */
+        width: 100%;
+    }
+
+    @media (--screen-xs) {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: calc($grid * 1.5); /* 12px padding */
+        padding-right: calc($grid * 1.5); /* 12px padding */
+        width: 100%;
+    }
+
+    @media (--screen-xxs) {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: calc($grid / 2); /* 4px padding */
+        padding-right: calc($grid / 2); /* 4px padding */
+        width: 100%;
+    }
+}

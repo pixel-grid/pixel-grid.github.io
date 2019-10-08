@@ -1,0 +1,103 @@
+.integrate {
+    margin-bottom: calc($grid * 11 + 8px);
+    padding-bottom: 5px;
+    @mixin container;
+
+    @mixin screen-sm {
+        margin-bottom: calc($grid * 4 + 13px);
+    }
+    @mixin screen-xs {
+        margin-bottom: calc($grid * 4 + 13px);
+    }
+    @mixin screen-xxs {
+        margin-bottom: calc($grid * 4 + 13px);
+    }
+
+    &__heading {
+        margin-top: 5px;
+        padding-bottom: calc($grid * 1.5 - 1px);
+        @mixin column-xlg 12;
+        @mixin column-lg 12;
+        @mixin column-md 12;
+        @mixin column-sm 12;
+        @mixin column-xs 12;
+        @mixin column-xxs 12;
+
+        @mixin screen-md {
+            margin-top: 4px;
+        }
+        @mixin screen-sm-down {
+            margin-top: 8px;
+        }
+    }
+
+    &__heading__description {
+        margin-bottom: calc($grid * 7);
+        @mixin column-xlg 12;
+        @mixin column-lg 12;
+        @mixin column-md 12;
+        @mixin column-sm 12;
+        @mixin column-xs 12;
+        @mixin column-xxs 12;
+    }
+
+    &__content {
+        @mixin column-xlg 10, 2;
+        @mixin column-lg 10, 2;
+        @mixin column-md 10, 2;
+        @mixin column-sm 10, 2;
+        @mixin column-xs 12;
+        @mixin column-xxs 12;
+    }
+
+    &__list {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 16px;
+    }
+
+    &__item {
+        font-size: 16px;
+        line-height: 24px;
+        color: map(colors, grey, 700);
+    }
+
+    &__item-code {
+        margin-top: calc($grid * 2 + 4px);
+        margin-bottom: calc($grid * 5 + 4px);
+        padding-left: calc($grid * 7);
+        font-family: $fontCode;
+        font-size: 16px;
+        line-height: 32px;
+        font-weight: 400;
+        color: map(colors, grey, 800);
+        word-wrap: break-word;
+        white-space: pre-wrap;
+
+        > code {
+            font-family: $fontCode;
+            font-size: 16px;
+            line-height: 32px;
+            font-weight: 400;
+            color: map(colors, grey, 800);
+        }
+
+        @mixin screen-sm-down {
+            margin-top: calc($grid * 2 + 0);
+            margin-bottom: calc($grid * 5 + 8px);
+            padding-left: 0;
+            font-size: 12px;
+            line-height: 24px;
+
+            > code {
+                font-size: 12px;
+                line-height: 24px;
+            }
+        }
+    }
+
+    &__learn-more {
+        margin-top: 4px;
+        display: inline-block;
+    }
+}

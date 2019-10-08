@@ -1,0 +1,122 @@
+.footer {
+    padding-top: calc($grid * 17);
+    @mixin container;
+
+    @mixin screen-sm-to-xs {
+        padding-top: calc($grid * 17 + 3px);
+    }
+    @mixin screen-xxs {
+        padding-top: calc($grid * 7 + 3px);
+    }
+
+    &__heading {
+        display: none;
+    }
+
+    &__about {
+        @mixin column-xlg 4, 0, 2;
+        @mixin column-lg 4, 0, 2;
+        @mixin column-md 4, 0, 2;
+        @mixin column-sm 12;
+        @mixin column-xs 12;
+        @mixin column-xxs 12;
+    }
+
+    &__logo-image {
+        margin-top: 4px;
+        user-select: none;
+        height: 48px;
+    }
+
+    &__description {
+        margin-top: calc($grid * 2 + 4px);
+        margin-bottom: calc($grid * 2);
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        color: map(colors, grey, 700);
+
+        @mixin screen-md {
+            margin-top: calc($grid * 2 + 5px);
+        }
+        @mixin screen-sm-to-xs {
+            margin-top: calc($grid * 2 + 4px);
+        }
+    }
+
+    &__stayintouch {
+        margin-top: calc($grid * 3);
+        margin-bottom: calc($grid * 2);
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        color: map(colors, grey, 700);
+
+        > a {
+            color: map(colors, blue, 600);
+            text-decoration: none;
+
+            &:hover {
+                color: map(colors, lightblue, 800);
+            }
+            &:active {
+                color: map(colors, blue, 800);
+            }
+        }
+    }
+
+    &__navigation {
+        padding-top: 0;
+        padding-bottom: 0;
+        @mixin column-xlg 2;
+        @mixin column-lg 2;
+        @mixin column-md 2;
+        @mixin column-sm 4;
+        @mixin column-xs 4;
+        @mixin column-xxs 12;
+
+        @mixin screen-sm-to-xs {
+            padding-top: 2px;
+        }
+        @mixin screen-xxs {
+            padding-top: 2px;
+            padding-bottom: 6px;
+        }
+    }
+
+    &__navigation-header {
+        margin-top: calc($grid * 3 + 2px);
+        margin-bottom: 0;
+        font-size: 16px;
+        line-height: 16px;
+        font-weight: 600;
+        color: map(colors, grey, 900);
+    }
+
+    &__navigation-list {
+        padding-top: calc($grid + 2px);
+        padding-left: 0;
+        padding-right: 0;
+        list-style-type: none;
+    }
+
+    &__navigation-item {
+        margin-top: 0;
+        margin-bottom: calc($grid * 1);
+    }
+
+    &__navigation-link {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        color: map(colors, grey, 700);
+        text-decoration: none;
+
+        &:hover {
+            color: map(colors, grey, 900);
+        }
+        &:active {
+            color: map(colors, grey, 800);
+        }
+    }
+}

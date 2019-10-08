@@ -1,0 +1,118 @@
+.navigation {
+    margin: 8px 0 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+
+    &__item {
+        margin: 0 38px 0 0;
+        height: 18px;
+
+        &:nth-last-child(2) {
+            margin-right: 0;
+        }
+
+        @mixin screen-sm {
+            display: none;
+        }
+        @mixin screen-xs {
+            display: none;
+        }
+        @mixin screen-xxs {
+            display: none;
+        }
+
+        &_switch {
+            margin: 0 0 0 32px;
+            padding-bottom: 2px;
+            width: 92px;
+            height: calc($grid * 4);
+            text-align: center;
+            z-index: 10001;
+
+            @mixin screen-lg {
+                width: 84px;
+            }
+            @mixin screen-md {
+                margin-left: 16px;
+                width: 95px;
+            }
+            @mixin screen-sm {
+                margin-left: 0;
+                padding-top: 5px;
+                padding-bottom: 0;
+                width: 95px;
+                display: block;
+            }
+            @mixin screen-xs {
+                margin-left: 0;
+                padding-top: 5px;
+                padding-bottom: 0;
+                width: 68px;
+                display: block;
+            }
+            @mixin screen-xxs {
+                margin-left: 0;
+                width: 70px;
+                display: block;
+            }
+        }
+    }
+
+    &__item-link {
+        padding: 0 0 4px 0;
+        font-size: 16px;
+        line-height: 16px;
+        font-weight: medium;
+        text-decoration: none;
+        color: map(colors, grey, 700);
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            box-sizing: border-box;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-top: 2px solid map(colors, grey, 700);
+            transform-origin: center;
+            transform: scale(0, 1);
+            transition: all 0.25s;
+        }
+
+        &:hover,
+        &:active {
+            color: map(colors, grey, 700);
+
+            &:before {
+                transform: scale(1, 1);
+            }
+        }
+
+        &:focus {
+            outline: none;
+
+            &:before {
+                transform: scale(1, 1);
+            }
+        }
+    }
+
+    &__item-switch-label {
+        margin-top: calc($grid + 1px);
+        margin-bottom: 0;
+        font-size: 12px;
+        line-height: 12px;
+        font-weight: 600;
+        color: map(colors, grey, 500);
+
+        @mixin screen-sm-down {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,72 @@
+.header {
+    margin-top: calc($grid * 9 + 5px);
+    margin-bottom: calc($grid * 6);
+    padding-top: 0;
+    padding-bottom: 0;
+    align-items: center;
+    @mixin container {
+        justify-content: space-between;
+    }
+
+    @mixin screen-sm {
+        margin-top: calc($grid * 8);
+        margin-bottom: calc($grid * (63 + 7) + 5px);
+        background-color: #fff;
+    }
+    @mixin screen-xs {
+        margin-top: calc($grid * 8);
+        margin-bottom: calc($grid * (63 + 7) + 5px);
+        background-color: #fff;
+    }
+    @mixin screen-xxs {
+        margin-top: calc($grid * 5);
+        margin-bottom: calc($grid * (58 + 7) + 6px);
+        background-color: #fff;
+    }
+
+    &__logo-container {
+        @mixin column-xlg 3, 1;
+        @mixin column-lg 3, 1;
+        @mixin column-md 3, 1;
+        @mixin column-sm 5;
+        @mixin column-xs 6;
+        @mixin column-xxs 8;
+        user-select: none;
+    }
+
+    &__logo-link {
+        padding-top: calc($grid * 2);
+        padding-bottom: calc($grid * 2);
+        display: block;
+
+        @mixin screen-sm {
+            padding-top: calc($grid * 4 - 3px);
+            padding-bottom: calc($grid * 2 + 6px);
+        }
+        @mixin screen-xs {
+            padding-top: calc($grid * 4 - 3px);
+            padding-bottom: calc($grid * 2 + 6px);
+        }
+        @mixin screen-xxs {
+            padding-top: calc($grid * 2 - 2px);
+            padding-bottom: calc($grid * 1);
+        }
+    }
+
+    &__logo-image {
+        height: 48px;
+
+        @mixin screen-xxs {
+            height: 36px;
+        }
+    }
+
+    &__navigation-container {
+        @mixin column-xlg 7;
+        @mixin column-lg 7;
+        @mixin column-md 7;
+        @mixin column-sm 2;
+        @mixin column-xs 2;
+        @mixin column-xxs 3;
+    }
+}

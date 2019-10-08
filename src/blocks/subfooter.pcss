@@ -1,0 +1,116 @@
+.subfooter {
+    margin-top: calc($grid * 6 + 3px);
+    margin-bottom: 0;
+    height: calc($grid * 26);
+    background: map(colors, grey, 50);
+
+    @mixin screen-md {
+        margin-top: calc($grid * 6 + 2px);
+    }
+    @mixin screen-sm {
+        margin-top: calc($grid * 6 + 7px);
+    }
+    @mixin screen-xs {
+        margin-top: calc($grid * 6 + 7px);
+    }
+    @mixin screen-xxs {
+        margin-top: calc($grid * 3 - 1px);
+        padding-top: calc($grid * 1);
+        padding-bottom: calc($grid * 2);
+        height: auto;
+    }
+
+    &__wrapper {
+        @mixin container;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__copyright {
+        padding-top: 3px;
+        @mixin column-xlg 5;
+        @mixin column-lg 4, 1;
+        @mixin column-md 4, 1;
+        @mixin column-sm 5;
+        @mixin column-xs 6;
+        @mixin column-xxs 12;
+        font-size: 16px;
+        line-height: 16px;
+        font-weight: 400;
+        color: map(colors, grey, 700);
+
+        @mixin screen-xxs {
+            padding-top: calc($grid * 1 + 4px);
+            order: 2;
+        }
+    }
+
+    &__grayedlogo {
+        @mixin column-xlg 2;
+        @mixin column-lg 2;
+        @mixin column-md 2;
+        @mixin column-sm 2;
+        @mixin column-xs 2;
+        @mixin screen-xs-down {
+            display: none;
+        }
+        text-align: center;
+        user-select: none;
+    }
+
+    &__links {
+        padding-top: 3px;
+        @mixin column-xlg 5;
+        @mixin column-lg 4, 0, 1;
+        @mixin column-md 4, 0, 1;
+        @mixin column-sm 5;
+        @mixin column-xs 6;
+        @mixin column-xxs 12;
+
+        @mixin screen-xxs {
+            padding-top: 8px;
+            order: 1;
+        }
+    }
+
+    &__links-list {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+
+        @mixin screen-xxs {
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+    }
+
+    &__links-item {
+        margin-left: calc($grid * 3);
+
+        @mixin screen-xxs {
+            margin-left: 0;
+        }
+    }
+
+    &__links-link {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        color: map(colors, grey, 700);
+        text-decoration: none;
+
+        &:hover {
+            color: map(colors, grey, 900);
+        }
+        &:active {
+            color: map(colors, grey, 800);
+        }
+    }
+}

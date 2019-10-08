@@ -1,0 +1,236 @@
+.hero {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    @mixin container;
+
+    @mixin screen-sm-down {
+        position: absolute;
+        top: 0;
+        background-color: map(colors, grey, 800);
+        z-index: -3;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            opacity: 0.05;
+            background-image: url(/assets/hero/hero.png);
+            background-position: 85% 50%;
+            z-index: -1;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 100px;
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQwIiBoZWlnaHQ9IjEwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNjQwIDEwMEgwQzM1My40NiAxMDAgNjQwIDAgNjQwIDB2MTAweiIgZmlsbD0iI2ZmZiIgZmlsbC1vcGFjaXR5PSIuMyIvPjxwYXRoIGQ9Ik02NDAgMTAwSDBjMzUzLjQ2IDAgNjQwLTc4LjU3MiA2NDAtNzguNTcyVjEwMHoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjUiLz48cGF0aCBkPSJNNjQwIDEwMEgwYzM1My40NiAwIDY0MC01Ny4xNDMgNjQwLTU3LjE0M1YxMDB6IiBmaWxsPSIjZmZmIi8+PC9zdmc+");
+            background-size: 100% 100px;
+            z-index: -2;
+        }
+    }
+    @mixin screen-lg {
+        padding-bottom: 4px;
+    }
+    @mixin screen-md {
+        padding-bottom: 6px;
+    }
+    @mixin screen-sm-to-xs {
+        padding-bottom: calc($grid * 3.5 + 1px);
+        height: auto;
+    }
+    @mixin screen-xxs {
+        padding-bottom: calc($grid * 3.5 + 3px);
+        height: auto;
+    }
+
+    &__image-container {
+        padding-top: calc($grid * 3 + 2px);
+        @mixin column-xlg 7;
+        @mixin column-lg 7;
+        @mixin column-md 7;
+        overflow: hidden;
+
+        @mixin screen-lg {
+            padding-top: calc($grid * 5 + 2px);
+        }
+        @mixin screen-md {
+            padding-top: calc($grid * 6 + 2px);
+        }
+
+        > svg {
+            width: calc($grid * 88);
+            transform: translate(calc($grid * -2));
+            overflow: hidden;
+
+            @mixin screen-lg {
+                width: calc($grid * 81.5);
+            }
+            @mixin screen-md {
+                width: calc($grid * 79);
+            }
+        }
+
+        @mixin screen-sm-down {
+            display: none;
+        }
+    }
+
+    &__welcome-container {
+        margin-top: calc($grid * 15);
+        @mixin column-xlg 4;
+        @mixin column-lg 4;
+        @mixin column-md 4;
+        @mixin column-sm 8, 1;
+        @mixin column-xs 10, 1;
+        @mixin column-xxs 12;
+
+        @mixin screen-sm-to-xs {
+            margin-top: calc($grid * 27 + 3px);
+        }
+        @mixin screen-xxs {
+            margin-top: calc($grid * 17 + 3px);
+        }
+    }
+
+    &__welcome-title {
+        margin-top: 0;
+        margin-bottom: calc($grid * 4);
+        font-size: 50px;
+        line-height: 64px;
+        font-weight: 400;
+        letter-spacing: 0.02em;
+        color: map(colors, grey, 900);
+
+        @mixin screen-sm-to-xs {
+            font-size: 40px;
+            line-height: 52px;
+        }
+        @mixin screen-xxs {
+            font-size: 32px;
+            line-height: 40px;
+        }
+
+        @mixin screen-sm-down {
+            color: map(colors, grey, 100);
+        }
+
+        > mark {
+            background-color: transparent;
+            color: map(colors, lightblue, 600);
+            position: relative;
+
+            &:before {
+                content: " ";
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 64px;
+                background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDY0IiBoZWlnaHQ9IjY0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIG9wYWNpdHk9Ii40IiBzdHJva2U9IiMwMzlCRTUiPjxwYXRoIGQ9Ik0wIDQ3LjVoNDY0TTAgMjAuNWg0NjRNMTguNSAwdjY0TTQ0OC41IDB2NjQiLz48L2c+PC9zdmc+");
+                background-repeat: no-repeat;
+                background-position: -14px -2px;
+                z-index: -1;
+
+                @mixin screen-sm-down {
+                    background: none;
+                    height: 0;
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__welcome-subtitle {
+        margin-top: calc($grid * 3);
+        margin-bottom: calc($grid * 4);
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        color: map(colors, grey, 700);
+
+        @mixin screen-sm-to-xs {
+            margin-top: calc($grid * 7 + 3px);
+        }
+        @mixin screen-xxs {
+            margin-top: calc($grid * 5 - 1px);
+        }
+
+        @mixin screen-sm-down {
+            color: map(colors, grey, 300);
+        }
+    }
+
+    &__download {
+        margin-top: calc($grid * 5);
+        padding-top: 3px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+
+        @mixin screen-sm-to-xs {
+            margin-top: calc($grid * 5 + 1px);
+        }
+        @mixin screen-xxs {
+            margin-top: calc($grid * 6);
+            flex-direction: column;
+        }
+    }
+
+    &__download-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__download-extension {
+        @mixin screen-xxs {
+            width: calc($grid * 26);
+        }
+    }
+
+    &__download-try {
+        &:focus {
+            border-color: transparent;
+        }
+        @mixin screen-sm-down {
+            color: map(colors, grey, 200);
+        }
+        @mixin screen-xxs {
+            display: none;
+        }
+    }
+
+    &__download-npm {
+        padding-left: 0;
+        padding-right: 0;
+
+        @mixin screen-xxs {
+            width: calc($grid * 26);
+        }
+
+        &:focus {
+            border-color: transparent;
+        }
+    }
+
+    &__download-divider {
+        padding: calc($grid * 2) calc($grid * 2.5);
+        color: map(colors, grey, 600);
+        font-size: 16px;
+        line-height: 16px;
+        font-weight: 600;
+
+        @mixin screen-sm-down {
+            color: map(colors, grey, 200);
+        }
+
+        @mixin screen-xxs {
+            display: none;
+        }
+    }
+}

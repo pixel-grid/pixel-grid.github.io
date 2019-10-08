@@ -1,0 +1,137 @@
+.download {
+    margin-bottom: calc($grid * 11 + 9px);
+    padding-bottom: 2px;
+    @mixin container;
+
+    @mixin screen-md {
+        padding-bottom: 3px;
+    }
+    @mixin screen-sm-to-xs {
+        margin-bottom: calc($grid * 4 + 13px);
+        padding-bottom: 6px;
+    }
+    @mixin screen-xxs {
+        margin-bottom: calc($grid * 4 + 14px);
+        padding-bottom: 5px;
+    }
+
+    &__heading {
+        @mixin column-xlg 12;
+        @mixin column-lg 12;
+        @mixin column-md 12;
+        @mixin column-sm 12;
+        @mixin column-xs 12;
+        @mixin column-xxs 12;
+
+        @mixin screen-sm-down {
+            margin-top: 9px !important;
+        }
+    }
+
+    &__heading__description {
+        margin-bottom: calc($grid * 8) !important;
+        @mixin column-xlg 12;
+        @mixin column-lg 12;
+        @mixin column-md 12;
+        @mixin column-sm 12;
+        @mixin column-xs 12;
+        @mixin column-xxs 12;
+
+        @mixin screen-sm-down {
+            margin-bottom: calc($grid * 4) !important;
+        }
+    }
+
+    &__list {
+        margin-top: 4px;
+        padding: 0;
+        @mixin column-xlg 12;
+        @mixin column-lg 12;
+        @mixin column-md 12;
+        @mixin column-sm 12;
+        @mixin column-xs 12;
+        @mixin column-xxs 12;
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @mixin screen-sm-down {
+            margin-top: 1px;
+            justify-content: center;
+        }
+    }
+
+    &__item {
+    }
+
+    &__item-link {
+        padding-top: calc($grid);
+        padding-bottom: calc($grid);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        width: calc($grid * 31);
+
+        @mixin screen-sm-down {
+            padding-top: calc($grid * 3 - 1px);
+            padding-bottom: calc($grid * 3 - 3px);
+            flex-direction: column;
+        }
+        @mixin screen-sm {
+            width: calc($grid * 23);
+        }
+        @mixin screen-xs {
+            width: calc($grid * 16);
+        }
+        @mixin screen-xxs {
+            width: calc($grid * 12);
+        }
+
+        &:focus {
+            outline: solid map(colors, lightblue, 400);
+
+            > .download__item-logo {
+                opacity: 1;
+            }
+        }
+        &:hover {
+            > .download__item-title {
+                color: map(colors, lightblue, 800);
+            }
+            > .download__item-logo {
+                opacity: 1;
+            }
+        }
+        &:active {
+            > .download__item-title {
+                color: map(colors, lightblue, 600);
+            }
+            > .download__item-logo {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__item-logo {
+        height: calc($grid * 8);
+        opacity: 0.85;
+    }
+
+    &__item-title {
+        margin-left: calc($grid * 3);
+        margin-right: calc($grid * 3);
+        font-size: 16px;
+        line-height: 16px;
+        font-weight: 600;
+        color: map(colors, grey, 800);
+
+        @mixin screen-sm-down {
+            margin-top: calc($grid + 4px);
+        }
+    }
+}

@@ -1,0 +1,95 @@
+.button {
+    padding: calc($grid * 2 - 3px) calc($grid * 2.5 - 3px);
+    background-color: map(colors, blue, 600);
+    border-radius: 3px;
+    color: map(colors, bluegrey, 50);
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 3px solid transparent;
+    cursor: pointer;
+    outline: none;
+    box-sizing: border-box;
+    text-align: center;
+    user-select: none;
+
+    &:focus {
+        border-color: map(colors, blue, 800);
+    }
+    &:hover {
+        background-color: map(colors, blue, 500);
+    }
+    &:active {
+        background-color: map(colors, blue, 700);
+    }
+
+    &_secondary {
+        background-color: map(colors, blue, 50);
+        color: map(colors, bluegrey, 600);
+
+        &:focus {
+            border-color: map(colors, blue, 300);
+        }
+        &:hover {
+            background-color: map(colors, blue, 100);
+        }
+        &:active {
+            background-color: map(colors, blue, 200);
+        }
+    }
+
+    &_link {
+        background-color: transparent;
+        color: map(colors, blue, 600);
+        user-select: text;
+
+        &:focus {
+            border-color: map(colors, blue, 300);
+        }
+        &:hover {
+            color: map(colors, blue, 400);
+            background-color: transparent;
+        }
+        &:active {
+            color: map(colors, blue, 700);
+            background-color: transparent;
+        }
+    }
+
+    &_linkgrayed {
+        background-color: transparent;
+        color: map(colors, grey, 700);
+        user-select: text;
+
+        &:focus {
+            border-color: map(colors, grey, 300);
+        }
+        &:hover {
+            color: map(colors, grey, 600);
+            background-color: transparent;
+        }
+        &:active {
+            color: map(colors, grey, 800);
+            background-color: transparent;
+        }
+    }
+
+    &_info {
+        padding: calc($grid * 2 - 1px) calc($grid * 2.5 - 1px);
+        background-color: transparent;
+        border-color: map(colors, bluegrey, 50);
+        color: map(colors, bluegrey, 50);
+        border-width: 1px;
+
+        &:focus {
+            border-color: map(colors, bluegrey, 300);
+        }
+        &:hover {
+            background-color: color(map(colors, blue, 50) a(20%));
+        }
+        &:active {
+            background-color: color(map(colors, blue, 50) a(30%));
+        }
+    }
+}

@@ -1,0 +1,151 @@
+.features {
+    margin-top: calc($grid * 15 + 4px);
+    margin-bottom: calc($grid * 12 + 8px);
+    @mixin container;
+
+    @mixin screen-md {
+        margin-bottom: calc($grid * 12 + 7px);
+    }
+    @mixin screen-sm-to-xs {
+        margin-bottom: calc($grid * 4 + 14px);
+    }
+    @mixin screen-xxs {
+        margin-bottom: calc($grid * 4 + 13px);
+    }
+
+    &__heading {
+        @mixin column-xlg 12;
+        @mixin column-lg 12;
+        @mixin column-md 12;
+        @mixin column-sm 12;
+        @mixin column-xs 12;
+        @mixin column-xxs 12;
+    }
+
+    &__heading__description {
+        @mixin column-xlg 12;
+        @mixin column-lg 12;
+        @mixin column-md 12;
+        @mixin column-sm 12;
+        @mixin column-xs 12;
+        @mixin column-xxs 12;
+    }
+
+    &__item {
+        margin-top: 1px;
+        @mixin column-xlg 4;
+        @mixin column-lg 4;
+        @mixin column-md 4;
+        @mixin column-sm 12;
+        @mixin column-xs 12;
+        @mixin column-xxs 12;
+    }
+
+    &__item-content {
+        margin-left: calc($grid * 4);
+        margin-right: calc($grid * 4);
+        padding: calc($grid * 8) calc($grid * 8) calc($grid * 16 - 3px);
+        min-height: calc($grid * 68.5);
+        box-sizing: border-box;
+        background: linear-gradient(map(colors, bluegrey, 50), color(map(colors, bluegrey, 100) a(10%)));
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: calc($grid * 16 - 3px);
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjEyNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBjbGlwLXBhdGg9InVybCgjY2xpcDApIiBmaWxsPSIjZmZmIj48cGF0aCBkPSJNMjY2Ljg0NCA3OS4yMjljLTEyLjE0MyAwLTE4LjM3OS0xNC43OTctMjQuMzYxLTMxLjUxOCA1LjcxNy05LjQ3NCAxMi43NzgtMTYuNDM0IDIyLjkzLTE2LjQzNCAxMi4wODkgMCAyMC4wNDIgMTEuMjk4IDI2LjcxNiAyNS40OS01LjgxNyA4Ljk4Ni0xMC42MjcgMjIuNDYyLTI1LjI4NSAyMi40NjJ6TTE2NC40NiA3My43ODZjLTIuMDM2LS41MDUtNC4yNDktLjc5LTYuNjktLjc5LTIyLjEyNSAwLTI4LjU0MyAyNC40ODQtNDIuMDExIDMyLjA2NyA0LjY1NyAzLjM0NSAxMC4wMzcgNS40NTggMTYuNTMxIDUuNDU4IDE0LjY0MS0uMDAxIDI0LjA2OS0xNi41MjUgMzIuMTctMzYuNzM1eiIgZmlsbC1vcGFjaXR5PSIuMyIvPjxwYXRoIGQ9Ik0yMDcuMzMxIDk5LjYxNmMtMjAuOTgxIDAtMjUuMTA4LTIxLjQyMi00Mi44NzMtMjUuODNDMTc3LjIxNCA0MS45NjMgMTg2LjY4MiAxIDIwOC4wMjggMWMxOS4zMzEgMCAyNi42NzggMjQuOTgyIDM0LjQ1MiA0Ni43MS0xMi4yMDIgMjAuMjIxLTE4LjI3NCA1MS45MDYtMzUuMTQ5IDUxLjkwNnpNNjguMDI1IDg1LjY3MmMxNy40OTEgMCAxOS41NCAyMS42MDQgMzkuNDggMjEuNjA0IDMuMDgxIDAgNS43ODQtLjgyNCA4LjI1Mi0yLjIxMy0xNy44NzEtMTIuODM5LTI1LjA1Ni00My44ODgtNDMuMzMxLTQzLjg4OC0yNC4wODMgMC0zMS4yMzggNDMuNjczLTQ3LjQyMyA0My42NzMtMTIuNTAxIDAtMTguNzUyLTEwLjk3Ni0yNS4wMDMtMjYuNTMydjE1LjExMmM2LjI1IDkuNzkzIDEyLjUwMiAxOS41ODcgMjUuMDAzIDE5LjU4NyAyNS4wMDEtLjAwMSAyNC41NjItMjcuMzQzIDQzLjAyMi0yNy4zNDN6bTMwNy4wMS00My4wNDZjLTE3Ljk2NiAwLTE3Ljc5MiA0MS44OTgtMzUuOTQyIDQxLjg5OC0xNi43NTQgMC0xOC42NzQtMzUuNjI0LTM2LjEyNi0zNS42MjQtNC43NzEgMC03LjkzMSAzLjM3My0xMC44NCA3Ljg2NyAxMS4yOCAyMy45ODYgMTguOTA3IDU2LjI0NyAzNi42NjkgNTYuMjQ3IDIxLjY0IDAgMjMuNzM1LTM5LjE2OSA0Ni4yMzktMzkuMTY5IDEyLjQzOSAwIDE4Ljc0NSA5Ljg0IDI0Ljk2NSAxOS41ODJWNzguMzE1Yy02LjIyLTE1LjQ3Ni0xMi41MjYtMzUuNjktMjQuOTY1LTM1LjY5eiIgZmlsbC1vcGFjaXR5PSIuNSIvPjxwYXRoIGQ9Ik0zMjguNzk2IDExMy4wMTRjLTE3Ljc2MiAwLTI1LjM4OS0zMi4yNi0zNi42NjktNTYuMjQ3LTUuODE3IDguOTg2LTEwLjYyNyAyMi40NjItMjUuMjg1IDIyLjQ2Mi0xMi4xNDQgMC0xOC4zNzktMTQuNzk3LTI0LjM2MS0zMS41MTgtMTIuMjA0IDIwLjIyLTE4LjI3NSA1MS45MDUtMzUuMTUgNTEuOTA1LTIwLjk4MSAwLTI1LjEwOC0yMS40MjItNDIuODczLTI1LjgzLTguMTAyIDIwLjIxLTE3LjUyOSAzNi43MzQtMzIuMTcxIDM2LjczNC02LjQ5MyAwLTExLjg3NC0yLjExMi0xNi41My01LjQ1OC0yLjQ2OCAxLjM4OS01LjE3MSAyLjIxMy04LjI1MiAyLjIxMy0xOS45NCAwLTIxLjk5LTIxLjYwNC0zOS40OC0yMS42MDQtMTguNDYgMC0xOC4wMiAyNy4zNDItNDMuMDIyIDI3LjM0Mi0xMi41MDEgMC0xOC43NTItOS43OTQtMjUuMDAzLTE5LjU4N3YzMy40NjJoNDAwdi0zMy40NmMtNi4yMi05Ljc0NC0xMi41MjYtMTkuNTgzLTI0Ljk2NS0xOS41ODMtMjIuNTA0IDAtMjQuNTk4IDM5LjE2OS00Ni4yMzkgMzkuMTY5eiIvPjwvZz48ZGVmcz48Y2xpcFBhdGggaWQ9ImNsaXAwIj48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMCAwaDQwMHYxMjUuODg4SDB6Ii8+PC9jbGlwUGF0aD48L2RlZnM+PC9zdmc+");
+            background-position: bottom -1px center;
+            background-size: calc(100% + 2px);
+            background-repeat: no-repeat;
+        }
+
+        @mixin screen-sm-to-xs {
+            margin-left: calc($grid * 2);
+            margin-right: calc($grid * 2);
+            margin-bottom: calc($grid * 4);
+            padding: calc($grid * 5);
+            min-height: 0;
+            background: map(colors, bluegrey, 50);
+
+            &:after {
+                display: none;
+                background: none;
+            }
+        }
+        @mixin screen-xxs {
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: calc($grid * 4);
+            padding: calc($grid * 2);
+            min-height: 0;
+            background: map(colors, bluegrey, 50);
+
+            &:after {
+                display: none;
+                background: none;
+            }
+        }
+
+        &_accent {
+            background: linear-gradient(color(map(colors, blue, 600) a(60%)), map(colors, blue, 600));
+
+            @mixin screen-sm-down {
+                background: map(colors, bluegrey, 50);
+            }
+        }
+    }
+
+    &__item-header {
+        margin: 5px 0 calc($grid + 2px);
+        order: 2;
+        font-size: 20px;
+        line-height: 24px;
+        color: map(colors, grey, 800);
+
+        &_accent {
+            @mixin screen-md-up {
+                color: map(colors, grey, 50);
+            }
+        }
+    }
+
+    &__item-icon-container {
+        height: calc($grid * 17);
+
+        @mixin screen-sm-down {
+            display: none;
+        }
+    }
+
+    &__item-icon {
+        order: 1;
+        fill: map(colors, blue, 400);
+
+        &_accent {
+            @mixin screen-md-up {
+                fill: map(colors, grey, 50);
+            }
+        }
+    }
+
+    &__item-description {
+        margin: 0;
+        order: 3;
+        font-size: 16px;
+        line-height: 24px;
+        color: map(colors, grey, 700);
+
+        &_accent {
+            @mixin screen-md-up {
+                color: map(colors, grey, 50);
+            }
+        }
+    }
+}

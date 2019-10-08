@@ -1,0 +1,152 @@
+.contribute {
+    background-color: map(colors, bluegrey, 800);
+    background-image: url(/assets/contribute/background.jpg);
+    background-position: 50% 80%;
+    position: relative;
+
+    @mixin screen-sm-down {
+        margin-top: calc($grid * 6);
+    }
+
+    &:before {
+        content: " ";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 100px;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyMCIgaGVpZ2h0PSIxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE5MjAgMEgwYzEwNjAuMzggMCAxOTIwIDEwMCAxOTIwIDEwMFYweiIgZmlsbD0iI2ZmZiIgZmlsbC1vcGFjaXR5PSIuMyIvPjxwYXRoIGQ9Ik0xOTIwIDBIMGMxMDYwLjM4IDAgMTkyMCA3OC41NzIgMTkyMCA3OC41NzJWMHoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjUiLz48cGF0aCBkPSJNMTkyMCAwSDBjMTA2MC4zOCAwIDE5MjAgNTcuMTQzIDE5MjAgNTcuMTQzVjB6IiBmaWxsPSIjZmZmIi8+PC9zdmc+");
+        background-size: 100% 100px;
+    }
+
+    &:after {
+        content: " ";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100px;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyMCIgaGVpZ2h0PSIxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMTAwaDE5MjBDODU5LjYyIDEwMCAwIDAgMCAwdjEwMHoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjMiLz48cGF0aCBkPSJNMCAxMDBoMTkyMEM4NTkuNjIgMTAwIDAgMjEuNDI5IDAgMjEuNDI5VjEwMHoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjUiLz48cGF0aCBkPSJNMCAxMDBoMTkyMEM4NTkuNjIgMTAwIDAgNDIuODU3IDAgNDIuODU3VjEwMHoiIGZpbGw9IiNmZmYiLz48L3N2Zz4=");
+        background-size: 100% 100px;
+    }
+
+    &__wrapper {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        @mixin container;
+
+        @mixin screen-sm-down {
+            padding-top: calc($grid * 15);
+        }
+    }
+
+    &__text {
+        margin-top: calc($grid * 17 + 1px);
+        margin-bottom: calc($grid * 22);
+        padding-top: 2px;
+        @mixin column-xlg 8, 1;
+        @mixin column-lg 8, 1;
+        @mixin column-md 8, 1;
+        @mixin column-sm 12;
+        @mixin column-xs 12;
+        @mixin column-xxs 12;
+        z-index: 1;
+
+        @mixin screen-sm-down {
+            margin-top: calc($grid * 10 + 1px);
+            margin-bottom: calc($grid * 8);
+            order: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @mixin screen-sm-to-xs {
+            margin-top: calc($grid * 10 + 1px);
+            margin-bottom: calc($grid * 8);
+        }
+
+        @mixin screen-xxs {
+            margin-top: calc($grid * 11 + 4px);
+            margin-bottom: calc($grid * 8);
+        }
+    }
+
+    &__image-container {
+        @mixin column-xlg 3;
+        @mixin column-lg 3;
+        @mixin column-md 3;
+        @mixin column-sm 12;
+        @mixin column-xs 12;
+        @mixin column-xxs 12;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+
+        @mixin screen-sm-down {
+            order: 1;
+            align-items: flex-start;
+            justify-content: center;
+        }
+    }
+
+    &__heading {
+        margin-top: 0;
+        margin-bottom: calc($grid * 1);
+        font-size: 50px;
+        line-height: 64px;
+        font-weight: 400;
+        color: map(colors, grey, 50);
+
+        @mixin screen-sm-down {
+            text-align: center;
+        }
+
+        @mixin screen-xxs {
+            font-size: 40px;
+            line-height: 48px;
+        }
+
+        > mark {
+            font-weight: 600;
+            color: map(colors, grey, 50);
+            background: transparent;
+        }
+    }
+
+    &__description {
+        margin-top: calc($grid * 2 + 1px);
+        margin-bottom: calc($grid * (3+6) + 3px);
+        font-size: 24px;
+        line-height: 32px;
+        color: map(colors, grey, 200);
+
+        @mixin screen-sm-down {
+            text-align: center;
+        }
+
+        @mixin screen-sm-to-xs {
+            margin-top: calc($grid * 1 + 1px);
+            margin-bottom: calc($grid * (3+5) + 3px);
+        }
+
+        @mixin screen-xxs {
+            margin-top: calc($grid * 2 - 1px);
+            margin-bottom: calc($grid * (3+1) + 2px);
+            font-size: 20px;
+            line-height: 32px;
+        }
+    }
+
+    &__get-started {
+        padding-left: 62px;
+        padding-right: 62px;
+    }
+
+    &__image {
+        opacity: 0.6;
+        width: 116px;
+        height: 116px;
+        user-select: none;
+    }
+}
