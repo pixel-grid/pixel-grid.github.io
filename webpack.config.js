@@ -185,6 +185,11 @@ module.exports = {
         /**
          * Assets
          */
-        new CopyPlugin([{ from: 'assets/', to: 'assets' }])
+        new CopyPlugin([{ from: 'assets/', to: 'assets' }]),
+
+        /**
+         * CNAME
+         */
+        new CopyPlugin([{ from: 'CNAME', to: '.' }])
     ]
 };
