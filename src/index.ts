@@ -1,6 +1,8 @@
 import './index.pcss';
 import 'mdn-polyfills/Array.from';
 import 'mdn-polyfills/Array.prototype.find';
+import 'mdn-polyfills/String.prototype.startsWith';
+import 'mdn-polyfills/NodeList.prototype.forEach';
 
 // import all css files
 
