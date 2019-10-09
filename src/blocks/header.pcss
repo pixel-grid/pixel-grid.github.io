@@ -8,6 +8,11 @@
         justify-content: space-between;
     }
 
+    @mixin screen-sm-down {
+        position: absolute;
+        top: 0;
+        z-index: 10;
+    }
     @mixin screen-sm {
         margin-top: calc($grid * 8);
         margin-bottom: calc($grid * (63 + 7) + 5px);
