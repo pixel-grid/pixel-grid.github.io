@@ -15,7 +15,7 @@ module.exports = {
 
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle/[name].js'
+        filename: 'bundle/[name].wrfsw.js'
     },
 
     devtool: isDevelopment && 'source-map',
@@ -166,8 +166,8 @@ module.exports = {
          * CSS
          */
         new MiniCssExtractPlugin({
-            filename: 'bundle/[name].css',
-            chunkFilename: '[id].css'
+            filename: 'bundle/[name].wrfsw.css',
+            chunkFilename: '[id].wrfsw.css'
         }),
         !isDevelopment
             ? new OptimizeCssAssetsPlugin({
