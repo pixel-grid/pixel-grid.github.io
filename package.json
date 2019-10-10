@@ -51,7 +51,7 @@
         "postcss-nested-ancestors": "^2.0.0",
         "postcss-pxtorem": "^4.0.1",
         "postcss-simple-vars": "^5.0.2",
-        "responsive-debug": "^0.2.5",
+        "responsive-debug": "^1.0.0",
         "style-loader": "^0.23.1",
         "ts-loader": "^6.2.0",
         "tslint": "^5.20.0",

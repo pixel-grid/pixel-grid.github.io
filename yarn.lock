@@ -6312,10 +6312,10 @@ resolve@^1.1.7, resolve@^1.3.2:
   dependencies:
     path-parse "^1.0.6"
 
-responsive-debug@^0.2.5:
-  version "0.2.5"
-  resolved "https://registry.yarnpkg.com/responsive-debug/-/responsive-debug-0.2.5.tgz#8fb76f88aee7b8632f73cdbe64b2cbe5f3da0938"
-  integrity sha512-LiqaNF1AMsZiFrdagrVvOsJTjRryeb6Z/eRoqccNzqEgVh1UvEu+MhlXAi8L9JG5nJM44N5nnVAA6x5xxM3Cnw==
+responsive-debug@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/responsive-debug/-/responsive-debug-1.0.0.tgz#843c9b54cb83cb52c93f00fb8cbc50cd8c2c9f27"
+  integrity sha512-+76otSPoQm/iKq+IVEAvns9D5JpcCohUhn+OTq0p6XmBeCLGBbHYkiFJcwkJ88Q9aCPwsHIv4HQV8t83O1AQ/A==
 
 ret@~0.1.10:
   version "0.1.15"
