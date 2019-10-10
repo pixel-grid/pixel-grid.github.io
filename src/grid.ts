@@ -42,7 +42,7 @@ const showGrid = () => {
                 width: 92
             } as IColumnsCenterGrid
         ],
-        mediaQuery: '(min-width: 120rem)'
+        mediaQuery: '(min-width: 120em)'
     };
 
     const lgPreset = {
@@ -56,7 +56,7 @@ const showGrid = () => {
                 width: 82
             } as IColumnsCenterGrid
         ],
-        mediaQuery: '(min-width: 89rem) and (max-width: 119.99rem)'
+        mediaQuery: '(min-width: 89em) and (max-width: 119.99em)'
     };
 
     const mdPreset = {
@@ -70,7 +70,7 @@ const showGrid = () => {
                 margin: 16
             } as IColumnsStretchGrid
         ],
-        mediaQuery: '(min-width: 84rem) and (max-width: 88.99rem)'
+        mediaQuery: '(min-width: 84em) and (max-width: 88.99em)'
     };
 
     const smPreset = {
@@ -84,7 +84,7 @@ const showGrid = () => {
                 margin: 16
             } as IColumnsStretchGrid
         ],
-        mediaQuery: '(min-width: 40rem) and (max-width: 83.99rem)'
+        mediaQuery: '(min-width: 40em) and (max-width: 83.99em)'
     };
 
     const xsPreset = {
@@ -98,7 +98,7 @@ const showGrid = () => {
                 margin: 16
             } as IColumnsStretchGrid
         ],
-        mediaQuery: '(min-width: 30rem) and (max-width: 39.99rem)'
+        mediaQuery: '(min-width: 30em) and (max-width: 39.99em)'
     };
 
     const xxsPreset = {
@@ -112,9 +112,9 @@ const showGrid = () => {
                 margin: 8
             } as IColumnsStretchGrid
         ],
-        mediaQuery: '(max-width: 29.99rem)'
+        mediaQuery: '(max-width: 29.99em)'
     };
-    token = initializeGrid([defaultPreset, xlgPreset, lgPreset, mdPreset, smPreset, xsPreset, xxsPreset]);
+    token = initializeGrid([defaultPreset, xlgPreset, lgPreset, mdPreset, smPreset, xsPreset, xxsPreset], { useRem: true });
 };
 
 const hideGrid = () => {

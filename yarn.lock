@@ -650,10 +650,10 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@sergeyzwezdin/pixelgrid@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@sergeyzwezdin/pixelgrid/-/pixelgrid-0.2.0.tgz#c4f15085d7f25cdebc930c93a58557ff22b582b6"
-  integrity sha512-h1Co3IQzZTZwXfVSp7HD4CQKQ8qonlxItcalfLAY7W33MWk0RbOzaVVm4W0Yvm0L8TPf2V/lQy87+gqwQ6ZkNA==
+"@sergeyzwezdin/pixelgrid@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@sergeyzwezdin/pixelgrid/-/pixelgrid-0.2.2.tgz#e9fcb48ac5a12a4d8152ae94c029eb73bb580e5c"
+  integrity sha512-l7PcMtnw3r6SEkjvSzViN3lISdKThEp+7cub7ucjeiigdHmM+dM8TUhqtkGt60jRomz4jJYLTGk+HgobYMm3JA==
   dependencies:
     core-js "^3.1.4"
 

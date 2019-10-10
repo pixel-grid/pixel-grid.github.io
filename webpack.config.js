@@ -134,7 +134,8 @@ module.exports = {
                                         'width',
                                         'min-width',
                                         'height',
-                                        'min-height'
+                                        'min-height',
+                                        'border-radius'
                                     ],
                                     replace: false,
                                     mediaQuery: true
