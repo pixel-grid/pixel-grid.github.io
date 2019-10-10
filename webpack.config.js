@@ -103,27 +103,39 @@ module.exports = {
                                 require('postcss-custom-media')({
                                     importFrom: {
                                         customMedia: {
-                                            '--screen-xxs': 'screen and (max-width: 29.99rem)',
-                                            '--screen-xs': 'screen and (min-width: 30rem) and (max-width: 39.99rem)',
-                                            '--screen-sm': 'screen and (min-width: 40rem) and (max-width: 83.99rem)',
-                                            '--screen-md': 'screen and (min-width: 84rem) and (max-width: 88.99rem)',
-                                            '--screen-lg': 'screen and (min-width: 89rem) and (max-width: 119.99rem)',
-                                            '--screen-xlg': 'screen and (min-width: 120rem)',
-                                            '--screen-sm-to-xs': 'screen and (min-width: 30rem) and (max-width: 83.99rem)',
-                                            '--screen-xs-down': 'screen and (max-width: 39.99rem)',
-                                            '--screen-sm-down': 'screen and (max-width: 83.99rem)',
-                                            '--screen-md-down': 'screen and (max-width: 88.99rem)',
-                                            '--screen-lg-down': 'screen and (max-width: 119.99rem)',
-                                            '--screen-xs-up': 'screen and (min-width: 30rem)',
-                                            '--screen-sm-up': 'screen and (min-width: 40rem)',
-                                            '--screen-md-up': 'screen and (min-width: 84rem)',
-                                            '--screen-lg-up': 'screen and (min-width: 89rem)'
+                                            '--screen-xxs': 'screen and (max-width: 29.99em)',
+                                            '--screen-xs': 'screen and (min-width: 30em) and (max-width: 39.99em)',
+                                            '--screen-sm': 'screen and (min-width: 40em) and (max-width: 83.99em)',
+                                            '--screen-md': 'screen and (min-width: 84em) and (max-width: 88.99em)',
+                                            '--screen-lg': 'screen and (min-width: 89em) and (max-width: 119.99em)',
+                                            '--screen-xlg': 'screen and (min-width: 120em)',
+                                            '--screen-sm-to-xs': 'screen and (min-width: 30em) and (max-width: 83.99em)',
+                                            '--screen-xs-down': 'screen and (max-width: 39.99em)',
+                                            '--screen-sm-down': 'screen and (max-width: 83.99em)',
+                                            '--screen-md-down': 'screen and (max-width: 88.99em)',
+                                            '--screen-lg-down': 'screen and (max-width: 119.99em)',
+                                            '--screen-xs-up': 'screen and (min-width: 30em)',
+                                            '--screen-sm-up': 'screen and (min-width: 40em)',
+                                            '--screen-md-up': 'screen and (min-width: 84em)',
+                                            '--screen-lg-up': 'screen and (min-width: 89em)'
                                         }
                                     }
                                 }),
                                 require('postcss-mq-optimize'),
                                 require('postcss-pxtorem')({
-                                    rootValue: 10,
+                                    rootValue: 16,
+                                    propList: [
+                                        'font',
+                                        'font-size',
+                                        'line-height',
+                                        'letter-spacing',
+                                        'margin',
+                                        'padding',
+                                        'width',
+                                        'min-width',
+                                        'height',
+                                        'min-height'
+                                    ],
                                     replace: false,
                                     mediaQuery: true
                                 }),
