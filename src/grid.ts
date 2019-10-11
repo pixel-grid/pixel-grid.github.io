@@ -114,7 +114,7 @@ const showGrid = () => {
         ],
         mediaQuery: '(max-width: 29.99em)'
     };
-    token = initializeGrid([defaultPreset, xlgPreset, lgPreset, mdPreset, smPreset, xsPreset, xxsPreset], { useRem: true });
+    token = initializeGrid([defaultPreset, xlgPreset, lgPreset, mdPreset, smPreset, xsPreset, xxsPreset], { zIndex: 10000, useRem: true });
 };
 
 const hideGrid = () => {
