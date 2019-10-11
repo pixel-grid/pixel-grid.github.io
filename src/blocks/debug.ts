@@ -1,8 +1,6 @@
-const debugEnabled = true;
+if (DEBUG) {
+    const { default: enableDebug } = require('responsive-debug');
 
-import enableDebug from 'responsive-debug';
-
-if (debugEnabled) {
     enableDebug([
         {
             name: 'xlg',

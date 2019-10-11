@@ -7,6 +7,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
+const isDebug = process.argv.indexOf('--debug') !== -1;
 
 module.exports = {
     entry: {
@@ -173,6 +174,10 @@ module.exports = {
     },
 
     plugins: [
+        new webpack.DefinePlugin({
+            DEBUG: isDebug
+        }),
+
         new CleanWebpackPlugin(),
 
         /**
