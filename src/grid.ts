@@ -128,6 +128,7 @@ const switchElement = document.getElementById('pluginenable');
 const trynowElement = document.getElementById('trynow');
 
 // "Try it" switch
+
 if (switchElement) {
     switchElement.addEventListener('change', (e: Event) => {
         const target = e.target as HTMLInputElement;
@@ -150,6 +151,7 @@ if (switchElement) {
 }
 
 // "Try it now" button
+
 if (trynowElement && switchElement) {
     trynowElement.addEventListener('click', () => {
         switchElement.click();
