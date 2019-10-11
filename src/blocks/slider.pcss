@@ -3,6 +3,24 @@
     padding-bottom: 20px;
     position: relative;
     overflow: hidden;
+    box-sizing: border-box;
+    height: calc($grid * 40 + 4px);
+
+    @mixin screen-lg {
+        height: calc($grid * 38 + 4px);
+    }
+    @mixin screen-md {
+        height: calc($grid * 36 + 4px);
+    }
+    @mixin screen-sm {
+        height: calc($grid * 36 + 4px);
+    }
+    @mixin screen-xs {
+        height: calc($grid * 30 + 4px);
+    }
+    @mixin screen-xxs {
+        height: calc($grid * 24 + 4px);
+    }
 
     &__wrapper {
         display: flex;
@@ -15,14 +33,6 @@
     }
 
     &__outer {
-        min-height: calc($grid * 40 + 4px);
-
-        @mixin screen-xs {
-            min-height: calc($grid * 28 + 4px);
-        }
-        @mixin screen-xxs {
-            min-height: calc($grid * 20 + 5px);
-        }
     }
 
     &__item {
@@ -65,7 +75,7 @@
     }
 
     &__control {
-        padding-top: 6px;
+        padding-top: calc($grid * 2 + 6px);
         padding-bottom: 6px;
         display: flex;
         flex-direction: row;
