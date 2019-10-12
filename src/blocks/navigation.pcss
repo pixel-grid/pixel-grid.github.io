@@ -1,12 +1,12 @@
 .navigation {
-    margin: 8px 0 0;
+    margin: 0;
     padding: 0;
     list-style-type: none;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-start;
 
     &__item {
         margin: 0 38px 0 0;
@@ -27,8 +27,8 @@
         }
 
         &_switch {
-            margin: 0 0 0 32px;
-            padding-bottom: 2px;
+            margin: -3px 0 0 32px;
+            padding-bottom: 0;
             width: 92px;
             height: calc($grid * 4);
             text-align: center;
@@ -43,14 +43,12 @@
             }
             @mixin screen-sm {
                 margin-left: 0;
-                padding-top: 5px;
                 padding-bottom: 0;
                 width: 95px;
                 display: block;
             }
             @mixin screen-xs {
                 margin-left: 0;
-                padding-top: 5px;
                 padding-bottom: 0;
                 width: 68px;
                 display: block;

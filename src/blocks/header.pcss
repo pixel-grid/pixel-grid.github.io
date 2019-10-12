@@ -1,9 +1,10 @@
 .header {
-    margin-top: calc($grid * 9 + 5px);
-    margin-bottom: calc($grid * 6);
+    margin-top: calc($grid * 10);
+    margin-bottom: calc($grid * 4);
     padding-top: 0;
     padding-bottom: 0;
-    align-items: center;
+    height: calc($grid * 13);
+    align-items: flex-start;
     @mixin container {
         justify-content: space-between;
     }
@@ -12,21 +13,11 @@
         position: absolute;
         top: 0;
         z-index: 10;
-    }
-    @mixin screen-sm {
-        margin-top: calc($grid * 8);
-        margin-bottom: calc($grid * (63 + 7) + 5px);
-        background-color: #fff;
-    }
-    @mixin screen-xs {
-        margin-top: calc($grid * 8);
-        margin-bottom: calc($grid * (63 + 7) + 5px);
         background-color: #fff;
     }
     @mixin screen-xxs {
         margin-top: calc($grid * 5);
-        margin-bottom: calc($grid * (58 + 7) + 6px);
-        background-color: #fff;
+        height: calc($grid * 8);
     }
 
     &__logo-container {
@@ -40,8 +31,8 @@
     }
 
     &__logo-link {
-        padding-top: calc($grid * 2);
-        padding-bottom: calc($grid * 2);
+        padding-top: calc($grid * 2 - 2px);
+        padding-bottom: calc($grid * 2 - 3px);
         display: block;
 
         @mixin screen-sm {
@@ -60,18 +51,28 @@
 
     &__logo-image {
         height: 48px;
+        width: 203px;
 
         @mixin screen-xxs {
             height: 36px;
+            width: 152px;
         }
     }
 
     &__navigation-container {
+        margin-top: calc($grid * 3 + 6px);
         @mixin column-xlg 7;
         @mixin column-lg 7;
         @mixin column-md 7;
         @mixin column-sm 2;
         @mixin column-xs 2;
         @mixin column-xxs 3;
+
+        @mixin screen-sm-to-xs {
+            margin-top: calc($grid * 5 + 6px);
+        }
+        @mixin screen-xxs {
+            margin-top: calc($grid * 2 + 6px);
+        }
     }
 }
