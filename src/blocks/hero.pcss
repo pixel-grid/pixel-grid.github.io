@@ -1,7 +1,6 @@
 .hero {
-    padding-top: 5px;
-    padding-bottom: 5px;
     @mixin container;
+    height: calc($grid * 87);
 
     @mixin screen-sm-down {
         position: relative;
@@ -35,32 +34,26 @@
         }
     }
     @mixin screen-lg {
-        padding-bottom: 4px;
     }
     @mixin screen-md {
-        padding-bottom: 6px;
     }
     @mixin screen-sm-to-xs {
-        padding-bottom: calc($grid * 3.5 + 1px);
         height: auto;
     }
     @mixin screen-xxs {
-        padding-bottom: calc($grid * 8.5 + 3px);
         height: auto;
     }
 
     &__image-container {
-        padding-top: calc($grid * 3 + 2px);
+        margin-top: 1px;
         @mixin column-xlg 7;
         @mixin column-lg 7;
         @mixin column-md 7;
         overflow: hidden;
 
         @mixin screen-lg {
-            padding-top: calc($grid * 5 + 2px);
         }
         @mixin screen-md {
-            padding-top: calc($grid * 6 + 2px);
         }
 
         > svg {
@@ -82,7 +75,8 @@
     }
 
     &__welcome-container {
-        margin-top: calc($grid * 15);
+        margin-top: calc($grid * 14 + 7px);
+
         @mixin column-xlg 4;
         @mixin column-lg 4;
         @mixin column-md 4;
@@ -92,10 +86,12 @@
         z-index: 6;
 
         @mixin screen-sm-to-xs {
-            margin-top: calc($grid * 27 + 3px);
+            margin-top: calc($grid * 33);
+            margin-bottom: 100px;
         }
         @mixin screen-xxs {
-            margin-top: calc($grid * 17 + 3px);
+            margin-top: calc($grid * 18 + 1px);
+            margin-bottom: 102px;
         }
     }
 
@@ -160,7 +156,7 @@
             margin-top: calc($grid * 7 + 3px);
         }
         @mixin screen-xxs {
-            margin-top: calc($grid * 5 - 1px);
+            margin-top: calc($grid * 5 - 2px);
         }
 
         @mixin screen-sm-down {
@@ -250,5 +246,34 @@
         @mixin screen-xxs {
             display: none;
         }
+    }
+}
+
+.browser_ie11 {
+    .hero {
+        &__welcome-container {
+            margin-top: calc($grid * 14 + 7px + 1px);
+
+            @mixin screen-sm-to-xs {
+                margin-top: calc($grid * 33 + 2px);
+            }
+            @mixin screen-xxs {
+                margin-top: calc($grid * 18 + 1px + 1px);
+            }
+        }
+
+        &__welcome-subtitle {
+            margin-top: calc($grid * 3 - 2px);
+            margin-bottom: calc($grid * 4 + 11px);
+            line-height: 23px;
+
+            @mixin screen-sm-to-xs {
+                margin-top: calc($grid * 7 + 1px);
+            }
+            @mixin screen-xxs {
+                margin-top: calc($grid * 5 - 2px);
+            }
+        }
+
     }
 }

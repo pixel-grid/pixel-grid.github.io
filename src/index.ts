@@ -1,4 +1,5 @@
 import './index.pcss';
+import './browserDetection';
 import 'mdn-polyfills/Array.from';
 import 'mdn-polyfills/Array.prototype.find';
 import 'mdn-polyfills/String.prototype.startsWith';
