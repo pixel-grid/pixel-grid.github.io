@@ -1,3 +1,9 @@
+declare global {
+    interface Document {
+        documentMode: any;
+    }
+}
+
 import './index.pcss';
 import './browserDetection';
 import 'mdn-polyfills/Array.from';
