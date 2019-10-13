@@ -1,22 +1,23 @@
 .features {
-    margin-top: calc($grid * 15 + 4px);
-    margin-bottom: calc($grid * 12 + 8px);
+    margin-top: calc($grid * 13 + 4px);
+    margin-bottom: calc($grid * 12 + 4px);
     @mixin container;
 
     @mixin screen-md {
-        margin-bottom: calc($grid * 12 + 7px);
+        margin-top: calc($grid * 13 + 3px);
+        margin-bottom: calc($grid * 12 + 4px);
     }
     @mixin screen-sm {
-        margin-top: calc($grid * 10 + 4px);
-        margin-bottom: calc($grid * 4 + 14px);
+        margin-top: calc($grid * 6 + 6px);
+        margin-bottom: calc($grid * 5 + 1px);
     }
     @mixin screen-xs {
-        margin-top: calc($grid * 10 + 4px);
-        margin-bottom: calc($grid * 4 + 14px);
+        margin-top: calc($grid * 6 + 6px);
+        margin-bottom: calc($grid * 5 + 1px);
     }
     @mixin screen-xxs {
-        margin-top: calc($grid * 6 + 4px);
-        margin-bottom: calc($grid * 4 + 13px);
+        margin-top: calc($grid * 6 + 5px);
+        margin-bottom: calc($grid * 5 + 1px);
     }
 
     &__heading {
@@ -153,5 +154,11 @@
                 color: map(colors, grey, 50);
             }
         }
+    }
+}
+
+.browser_ie11 {
+    .features {
+        /* margin-top: calc($grid * 13 + 5px); */
     }
 }

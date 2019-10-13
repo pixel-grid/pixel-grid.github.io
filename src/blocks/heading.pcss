@@ -43,3 +43,21 @@
         }
     }
 }
+
+.browser_ie11 {
+    .heading {
+        margin-top: 10px;
+        margin-bottom: calc($grid * 2 - 1px);
+
+        @mixin screen-md {
+            margin-top: 11px;
+        }
+        @mixin screen-xxs {
+            margin-top: 12px;
+        }
+
+        &:after {
+            bottom: 1px;
+        }
+    }
+}

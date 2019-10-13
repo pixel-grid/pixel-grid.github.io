@@ -1,8 +1,13 @@
 .screenshots {
+    padding-top: 4px;
     padding-bottom: calc($grid * 10);
 
     @mixin screen-md {
-        padding-bottom: calc($grid * 10 - 1px);
+        padding-top: 3px;
+        padding-bottom: calc($grid * 10);
+    }
+    @mixin screen-sm-down {
+        padding-top: 5px;
     }
 
     &__wrapper {
