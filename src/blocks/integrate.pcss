@@ -3,14 +3,14 @@
     padding-bottom: 5px;
     @mixin container;
 
-    @mixin screen-sm {
-        margin-bottom: calc($grid * 4 + 13px);
+    @mixin screen-md {
+        padding-top: 1px;
     }
-    @mixin screen-xs {
-        margin-bottom: calc($grid * 4 + 13px);
+    @mixin screen-sm-to-xs {
+        padding-top: 6px;
     }
     @mixin screen-xxs {
-        margin-bottom: calc($grid * 4 + 13px);
+        padding-top: 5px;
     }
 
     &__heading {
@@ -99,5 +99,21 @@
     &__learn-more {
         margin-top: 4px;
         display: inline-block;
+    }
+}
+
+.browser_ie11 {
+    .integrate {
+        padding-top: 4px;
+
+        @mixin screen-sm {
+            padding-top: 6px;
+        }
+        @mixin screen-xs {
+            padding-top: 6px;
+        }
+        @mixin screen-xxs {
+            padding-top: 8px;
+        }
     }
 }

@@ -46,7 +46,7 @@
 
     &__text {
         margin-top: calc($grid * 17 + 1px);
-        margin-bottom: calc($grid * 22);
+        margin-bottom: calc($grid * 22 - 2px);
         padding-top: 2px;
         @mixin column-xlg 8, 1;
         @mixin column-lg 8, 1;
@@ -120,7 +120,7 @@
 
     &__description {
         margin-top: calc($grid * 2 + 1px);
-        margin-bottom: calc($grid * (3+6) + 3px);
+        margin-bottom: calc($grid * (3+6) + 5px);
         font-size: 24px;
         line-height: 32px;
         color: map(colors, grey, 200);
@@ -152,5 +152,11 @@
         width: 116px;
         height: 116px;
         user-select: none;
+    }
+}
+
+.browser_ie11 {
+    .contribute {
+        padding-top: 2px;
     }
 }
