@@ -8,13 +8,13 @@
         margin-top: calc($grid * 6 + 2px);
     }
     @mixin screen-sm {
-        margin-top: calc($grid * 6 + 7px);
+        margin-top: calc($grid * 6 + 2px);
     }
     @mixin screen-xs {
-        margin-top: calc($grid * 6 + 7px);
+        margin-top: calc($grid * 6 + 2px);
     }
     @mixin screen-xxs {
-        margin-top: calc($grid * 3 - 1px);
+        margin-top: calc($grid * 3 - 2px);
         padding-top: calc($grid * 1);
         padding-bottom: calc($grid * 2);
         height: auto;
@@ -54,7 +54,8 @@
         }
 
         @mixin screen-xxs {
-            padding-top: calc($grid * 1 + 4px);
+            padding-top: calc($grid * 3 + 4px);
+            padding-bottom: calc($grid * 2);
             order: 2;
         }
     }
@@ -82,7 +83,7 @@
         @mixin column-xxs 12;
 
         @mixin screen-xxs {
-            padding-top: 8px;
+            padding-top: calc($grid + 1px);
             order: 1;
         }
     }
@@ -117,6 +118,7 @@
         font-weight: 400;
         color: map(colors, grey, 700);
         text-decoration: none;
+        display: block;
 
         &:hover {
             color: map(colors, grey, 900);
