@@ -1,0 +1,86 @@
+.demo1 {
+    margin-top: calc($grid*11);
+    @mixin container;
+
+    &__2col {
+        margin-bottom: calc($grid*5);
+        @mixin column-xlg 2;
+        @mixin column-lg 2;
+        @mixin column-md 2;
+        @mixin column-sm 2;
+        @mixin column-xs 2;
+        @mixin column-xxs 2;
+        height: 120px;
+        background-image: url(/assets/paint.jpg);
+        background-repeat: no-repeat;
+        background-position: -2780px -1050px;
+        border-radius: 4px;
+
+        &_1 {
+        }
+        &_2 {
+            background-position: -2100px -900px;
+        }
+        &_3 {
+            background-position: -2700px -1050px;
+        }
+        &_4 {
+            background-position: -2200px -1050px;
+        }
+        &_5 {
+            background-position: -2100px -850px;
+        }
+        &_6 {
+            background-position: -2300px -1150px;
+        }
+    }
+
+    &__3col {
+        margin-bottom: calc($grid*5);
+        @mixin column-xlg 3;
+        @mixin column-lg 3;
+        @mixin column-md 3;
+        @mixin column-sm 3;
+        @mixin column-xs 3;
+        @mixin column-xxs 3;
+        height: 120px;
+        background-image: url(/assets/paint.jpg);
+        background-repeat: no-repeat;
+        background-position: -2200px -1050px;
+        border-radius: 4px;
+
+        &_1 {
+        }
+        &_2 {
+            background-position: -2600px -950px;
+        }
+        &_3 {
+            background-position: -2900px -950px;
+        }
+        &_4 {
+            background-position: -2600px -1050px;
+        }
+    }
+
+    &__6col {
+        margin-bottom: calc($grid*5);
+        @mixin column-xlg 6;
+        @mixin column-lg 6;
+        @mixin column-md 6;
+        @mixin column-sm 6;
+        @mixin column-xs 6;
+        @mixin column-xxs 6;
+        height: 328px;
+        background-image: url(/assets/paint.jpg);
+        background-repeat: no-repeat;
+        background-position: -1700px -900px;
+        border-radius: 4px;
+
+        &_1 {
+        }
+        &_2 {
+            background-position: -2650px -910px;
+        }
+    }
+
+}

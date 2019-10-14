@@ -1,0 +1,67 @@
+.demo5 {
+    @mixin container;
+
+    &__block1 {
+        margin-top: calc($grid * 12);
+        padding-top: calc($grid * 7);
+        @mixin column-xlg 3, 3;
+        @mixin column-lg 3, 3;
+        @mixin column-md 3, 3;
+        @mixin column-sm 3, 3;
+        @mixin column-xs 3, 3;
+        @mixin column-xxs 3, 3;
+
+        background-color: map(colors, red, 700);
+        height: 248px;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    &__block2 {
+        margin-top: calc($grid * 12);
+        padding-top: calc($grid * 7);
+        @mixin column-xlg 3, 0, 3;
+        @mixin column-lg 3, 0, 3;
+        @mixin column-md 3, 0, 3;
+        @mixin column-sm 3, 0, 3;
+        @mixin column-xs 3, 0, 3;
+        @mixin column-xxs 3, 0, 3;
+
+        background-color: map(colors, lightblue, 700);
+        height: 248px;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    &__block3 {
+        margin-top: calc($grid * 5);
+        padding-top: calc($grid * 7);
+        @mixin column-xlg 3, 3;
+        @mixin column-lg 3, 3;
+        @mixin column-md 3, 3;
+        @mixin column-sm 3, 3;
+        @mixin column-xs 3, 3;
+        @mixin column-xxs 3, 3;
+
+        background-color: map(colors, green, 700);
+        height: 248px;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    &__block4 {
+        margin-top: calc($grid * 5);
+        padding-top: calc($grid * 7);
+        @mixin column-xlg 3, 0, 3;
+        @mixin column-lg 3, 0, 3;
+        @mixin column-md 3, 0, 3;
+        @mixin column-sm 3, 0, 3;
+        @mixin column-xs 3, 0, 3;
+        @mixin column-xxs 3, 0, 3;
+
+        background-color: map(colors, yellow, 700);
+        height: 248px;
+        border-radius: 6px;
+        text-align: center;
+    }
+}

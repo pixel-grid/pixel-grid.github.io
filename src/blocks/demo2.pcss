@@ -1,0 +1,33 @@
+.demo2 {
+    @mixin container;
+
+    &__text {
+        @mixin column-xlg 8, 1;
+        @mixin column-lg 8, 1;
+        @mixin column-md 8, 1;
+        @mixin column-sm 8, 1;
+        @mixin column-xs 8, 1;
+        @mixin column-xxs 8, 1;
+    }
+
+    &__header {
+        margin-top: calc($grid * 16 + 7px);
+        margin-bottom: calc($grid * 9 + 5px);
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 64px;
+        line-height: 72px;
+        color: #C2185B;
+    }
+
+    &__content {
+        margin: 0;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 48px;
+        line-height: 72px;
+        color: #FF6F00;
+    }
+}

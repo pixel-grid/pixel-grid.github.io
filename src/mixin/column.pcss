@@ -1,0 +1,61 @@
+@define-mixin column-xlg $count, $offsetLeft: 0, $offsetRight: 0 {
+    margin-left: calc($grid * 2 + $offsetLeft * 124px);
+    margin-right: calc($grid * 2 + $offsetRight * 124px);
+    width: calc(124px * $count - $grid * 2 * 2);
+    box-sizing: border-box;
+
+    @media (--screen-xlg) {
+        margin-left: calc($grid * 2 + $offsetLeft * 124px);
+        margin-right: calc($grid * 2 + $offsetRight * 124px);
+        width: calc(124px * $count - $grid * 2 * 2);
+    }
+}
+
+@define-mixin column-lg $count, $offsetLeft: 0, $offsetRight: 0 {
+    @media (--screen-lg) {
+        margin-left: calc($grid * 2 + $offsetLeft * 114px);
+        margin-right: calc($grid * 2 + $offsetRight * 114px);
+        width: calc(114px * $count - $grid * 2 * 2);
+    }
+}
+
+@define-mixin column-md $count, $offsetLeft: 0, $offsetRight: 0 {
+    @media (--screen-md) {
+        margin-left: calc($grid + $offsetLeft * 100% / 12);
+        margin-right: calc($grid + $offsetRight * 100% / 12);
+        width: calc(100% / 12 * $count - $grid * 2);
+    }
+}
+
+@define-mixin column-sm $count, $offsetLeft: 0, $offsetRight: 0 {
+    @media (--screen-sm) {
+        margin-left: calc($grid/2 + $offsetLeft * 100% / 12);
+        margin-right: calc($grid/2 + $offsetRight * 100% / 12);
+        width: calc(100% / 12 * $count - $grid/2 * 2);
+    }
+}
+
+@define-mixin column-xs $count, $offsetLeft: 0, $offsetRight: 0 {
+    @media (--screen-xs) {
+        margin-left: calc($grid/2 + $offsetLeft * 100% / 12);
+        margin-right: calc($grid/2 + $offsetRight * 100% / 12);
+        width: calc(100% / 12 * $count - $grid/2 * 2);
+    }
+}
+
+@define-mixin column-xxs $count, $offsetLeft: 0, $offsetRight: 0 {
+    @media (--screen-xxs) {
+        margin-left: calc($grid/2 + $offsetLeft * 100% / 12);
+        margin-right: calc($grid/2 + $offsetRight * 100% / 12);
+        width: calc(100% / 12 * $count - $grid/2 * 2);
+    }
+}
+
+@define-mixin column $count: 1 {
+    @mixin column-xlg $count;
+    @mixin column-lg $count;
+    @mixin column-md $count;
+    @mixin column-sm $count;
+    @mixin column-xs $count;
+    @mixin column-xxs $count;
+}

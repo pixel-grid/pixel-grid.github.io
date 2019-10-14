@@ -1,0 +1,51 @@
+.demo4 {
+    @mixin container;
+
+    &__block1 {
+        margin-top: calc($grid * 20);
+        padding-top: calc($grid * 4);
+        @mixin column-xlg 6, 3;
+        @mixin column-lg 6, 3;
+        @mixin column-md 6, 3;
+        @mixin column-sm 6, 3;
+        @mixin column-xs 6, 3;
+        @mixin column-xxs 6, 3;
+
+        background-color: map(colors, red, 700);
+        height: 104px;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    &__block2 {
+        margin-top: calc($grid * 5);
+        padding-top: calc($grid * 4);
+        @mixin column-xlg 6, 3;
+        @mixin column-lg 6, 3;
+        @mixin column-md 6, 3;
+        @mixin column-sm 6, 3;
+        @mixin column-xs 6, 3;
+        @mixin column-xxs 6, 3;
+
+        background-color: map(colors, lightblue, 700);
+        height: 104px;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    &__block3 {
+        margin-top: calc($grid * 5);
+        padding-top: calc($grid * 4);
+        @mixin column-xlg 6, 3;
+        @mixin column-lg 6, 3;
+        @mixin column-md 6, 3;
+        @mixin column-sm 6, 3;
+        @mixin column-xs 6, 3;
+        @mixin column-xxs 6, 3;
+
+        background-color: map(colors, green, 700);
+        height: 104px;
+        border-radius: 6px;
+        text-align: center;
+    }
+}
