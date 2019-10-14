@@ -1,4 +1,4 @@
-if (DEBUG) {
+if (process.env.DEBUG) {
     const { default: enableDebug } = require('responsive-debug');
 
     enableDebug([

@@ -1,9 +1,11 @@
 const webpack = require('webpack');
 const path = require('path');
 
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const SriPlugin = require('webpack-subresource-integrity');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
@@ -16,7 +18,9 @@ module.exports = {
 
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle/[name].wrfsw.js'
+        filename: 'bundle/[name].[hash].js',
+        publicPath: '/',
+        crossOriginLoading: 'anonymous'
     },
 
     devtool: isDevelopment && 'source-map',
@@ -175,17 +179,36 @@ module.exports = {
 
     plugins: [
         new webpack.DefinePlugin({
-            DEBUG: isDebug
+            'process.env.DEBUG': isDebug,
+            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
         }),
 
         new CleanWebpackPlugin(),
 
         /**
+         * HTML
+         */
+        new SriPlugin({
+            hashFuncNames: ['sha256', 'sha384'],
+            enabled: process.env.NODE_ENV === 'production'
+        }),
+
+        new HtmlWebpackPlugin({
+            template: 'html/index.html',
+            minify: !isDebug
+                ? {
+                      collapseWhitespace: true,
+                      removeComments: true
+                  }
+                : false
+        }),
+
+        /**
          * CSS
          */
         new MiniCssExtractPlugin({
-            filename: 'bundle/[name].wrfsw.css',
-            chunkFilename: '[id].wrfsw.css'
+            filename: 'bundle/[name].[hash].css',
+            chunkFilename: '[id].[hash].css'
         }),
         !isDevelopment
             ? new OptimizeCssAssetsPlugin({
@@ -198,7 +221,7 @@ module.exports = {
         /**
          * HTML
          */
-        new CopyPlugin([{ from: 'html/', test: /\.html$/ }]),
+        // new CopyPlugin([{ from: 'html/', test: /\.html$/ }]),
 
         /**
          * Assets
