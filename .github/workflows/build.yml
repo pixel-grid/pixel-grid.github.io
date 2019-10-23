@@ -3,10 +3,10 @@ name: Build
 on:
   push:
     branches-ignore:
-      - 'master'
+      - master
   pull_request:
     branches-ignore:
-      - 'master'
+      - master
 
 jobs:
   build:
