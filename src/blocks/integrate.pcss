@@ -80,6 +80,20 @@
             line-height: 32px;
             font-weight: 400;
             color: map(colors, grey, 800);
+
+            a {
+                color: map(colors, grey, 800);
+
+                &:link, &:visited {
+                    color: map(colors, grey, 800);
+                }
+                &:hover {
+                    color: map(colors, grey, 900);
+                }
+                &:active {
+                    color: map(colors, grey, 700);
+                }
+            }
         }
 
         @mixin screen-sm-down {
