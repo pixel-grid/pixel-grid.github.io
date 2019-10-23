@@ -231,6 +231,12 @@ module.exports = {
         /**
          * CNAME
          */
-        new CopyPlugin([{ from: 'CNAME', to: '.' }])
+        new CopyPlugin([{ from: 'CNAME', to: '.' }]),
+
+        /**
+         * SEO files
+         */
+        new CopyPlugin([{ from: 'robots.txt', to: '.' }]),
+        new CopyPlugin([{ from: 'sitemap.xml', to: '.' }])
     ]
 };

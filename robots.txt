@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pixelgrid.zwezdin.com/sitemap.xml
