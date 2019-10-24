@@ -124,28 +124,35 @@ const hideGrid = () => {
     }
 };
 
-const switchElement = document.getElementById('pluginenable');
+const switchElement = document.getElementById('pluginenable') as HTMLInputElement;
 const trynowElement = document.getElementById('trynow');
+
+const handleSwitchElementState = () => {
+    if (switchElement) {
+        const checked = switchElement.checked;
+        if (checked) {
+            showGrid();
+
+            if (trynowElement) {
+                trynowElement.innerText = 'Remove grid';
+            }
+        } else {
+            hideGrid();
+
+            if (trynowElement) {
+                trynowElement.innerText = 'Try it now';
+            }
+        }
+    }
+};
 
 // "Try it" switch
 
 if (switchElement) {
     switchElement.addEventListener('change', (e: Event) => {
-        const target = e.target as HTMLInputElement;
-        if (target) {
-            if (target.checked) {
-                showGrid();
-
-                if (trynowElement) {
-                    trynowElement.innerText = 'Remove grid';
-                }
-            } else {
-                hideGrid();
-
-                if (trynowElement) {
-                    trynowElement.innerText = 'Try it now';
-                }
-            }
+        handleSwitchElementState();
+        if (switchElement.checked && window.ym) {
+            window.ym(55662481, 'reachGoal', 'try-it-header');
         }
     });
 }
@@ -154,6 +161,10 @@ if (switchElement) {
 
 if (trynowElement && switchElement) {
     trynowElement.addEventListener('click', () => {
-        switchElement.click();
+        switchElement.checked = !switchElement.checked;
+        handleSwitchElementState();
+        if (switchElement.checked && window.ym) {
+            window.ym(55662481, 'reachGoal', 'try-it-hero');
+        }
     });
 }

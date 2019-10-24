@@ -2,6 +2,10 @@ declare global {
     interface Document {
         documentMode: any;
     }
+
+    interface Window {
+        ym?: (id: number, method: string, target: string) => void;
+    }
 }
 
 import './index.pcss';
@@ -22,3 +26,15 @@ css.keys()
 
 const js = require.context('./', true, /\.ts$/);
 js.keys().forEach(js);
+
+document.querySelectorAll('[data-analytics]').forEach((documentElement) => {
+    documentElement.addEventListener('click', (event) => {
+        const target: HTMLElement = event.target as HTMLElement;
+        if (target && window.ym) {
+            const analyticsTarget = target.getAttribute('data-analytics');
+            if (analyticsTarget) {
+                window.ym(55662481, 'reachGoal', analyticsTarget);
+            }
+        }
+    });
+});
