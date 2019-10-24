@@ -12,6 +12,5 @@
   "requirePragma": false,
   "insertPragma": false,
   "parser": "typescript",
-  "proseWrap": "preserve",
-  "cssEnable": ["pcss"]
+  "proseWrap": "preserve"
 }
