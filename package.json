@@ -8,8 +8,9 @@
         "build": "cross-env NODE_ENV=production webpack -p --mode production",
         "watch": "cross-env NODE_ENV=development webpack --mode development --watch",
         "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --open",
+        "lint": "tslint -c ./tslint.json './src/**/*.ts*'",
         "format-check": "prettier --check \"src/**/*.ts*\"",
-		"format": "prettier --write \"src/**/*.ts*\""
+        "format": "prettier --write \"src/**/*.ts*\""
     },
     "author": "",
     "license": "MIT",
