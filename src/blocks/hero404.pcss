@@ -1,0 +1,226 @@
+.hero404 {
+    @mixin container;
+    height: calc($grid * 87);
+
+    @mixin screen-sm-down {
+        margin-bottom: calc($grid * 8 + 4px);
+        position: relative;
+        background-color: map(colors, grey, 800);
+        z-index: 5;
+        height: auto;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            opacity: 0.05;
+            background-image: url(/assets/hero/hero.png);
+            background-position: 85% 50%;
+            z-index: 4;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 100PX;
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQwIiBoZWlnaHQ9IjEwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNjQwIDEwMEgwQzM1My40NiAxMDAgNjQwIDAgNjQwIDB2MTAweiIgZmlsbD0iI2ZmZiIgZmlsbC1vcGFjaXR5PSIuMyIvPjxwYXRoIGQ9Ik02NDAgMTAwSDBjMzUzLjQ2IDAgNjQwLTc4LjU3MiA2NDAtNzguNTcyVjEwMHoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjUiLz48cGF0aCBkPSJNNjQwIDEwMEgwYzM1My40NiAwIDY0MC01Ny4xNDMgNjQwLTU3LjE0M1YxMDB6IiBmaWxsPSIjZmZmIi8+PC9zdmc+");
+            background-repeat: no-repeat;
+            background-position: right 0;
+            z-index: 4;
+        }
+    }
+    @mixin screen-xxs {
+        margin-bottom: calc($grid * 8 - 1px);
+    }
+
+    &__image-container {
+        margin-top: calc($grid * 16);
+        @mixin column-xlg 2, 2;
+        @mixin column-lg 2, 2;
+        @mixin column-md 2, 2;
+        text-align: center;
+
+        > svg {
+            overflow: hidden;
+        }
+
+        @mixin screen-sm-down {
+            display: none;
+        }
+    }
+
+    &__welcome-container {
+        margin-top: calc($grid * 14 + 7px);
+
+        @mixin column-xlg 5, 1;
+        @mixin column-lg 5, 1;
+        @mixin column-md 5, 1;
+        @mixin column-sm 8, 1;
+        @mixin column-xs 10, 1;
+        @mixin column-xxs 12;
+        z-index: 6;
+
+        @mixin screen-sm-to-xs {
+            margin-top: calc($grid * 33);
+            margin-bottom: calc($grid * 12 + 1px);
+        }
+        @mixin screen-xxs {
+            margin-top: calc($grid * 18 + 1px);
+            margin-bottom: 102px;
+        }
+    }
+
+    &__welcome-title {
+        margin-top: 0;
+        margin-bottom: calc($grid * 4);
+        font-size: 50px;
+        line-height: 64px;
+        font-weight: 400;
+        letter-spacing: 0.02em;
+        color: map(colors, grey, 900);
+
+        @mixin screen-sm-to-xs {
+            font-size: 40px;
+            line-height: 52px;
+        }
+        @mixin screen-xxs {
+            font-size: 32px;
+            line-height: 40px;
+        }
+
+        @mixin screen-sm-down {
+            color: map(colors, grey, 100);
+        }
+
+        > mark {
+            background-color: transparent;
+            color: map(colors, lightblue, 600);
+            position: relative;
+        }
+    }
+
+    &__welcome-subtitle {
+        margin-top: calc($grid * 3);
+        margin-bottom: calc($grid * 4);
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        color: map(colors, grey, 700);
+
+        @mixin screen-sm-to-xs {
+            margin-top: calc($grid * 7 + 3px);
+        }
+        @mixin screen-xxs {
+            margin-top: calc($grid * 5 - 2px);
+        }
+
+        @mixin screen-sm-down {
+            color: map(colors, grey, 300);
+        }
+    }
+
+    &__download {
+        margin-top: calc($grid * 5);
+        padding-top: 3px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+
+        @mixin screen-sm {
+            margin-top: calc($grid * 5 + 1px);
+        }
+        @mixin screen-xs {
+            margin-top: calc($grid * 5 + 1px);
+            flex-direction: column;
+        }
+        @mixin screen-xxs {
+            margin-top: calc($grid * 6);
+            flex-direction: column;
+        }
+    }
+
+    &__download-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__download-extension {
+        @mixin screen-xs {
+            width: calc($grid * 26);
+        }
+        @mixin screen-xxs {
+            width: calc($grid * 26);
+        }
+    }
+
+    &__download-try {
+        margin-top: 0;
+        margin-bottom: 0;
+        &:focus {
+            border-color: transparent;
+        }
+        @mixin screen-sm-down {
+            color: map(colors, grey, 200);
+        }
+        @mixin screen-xs {
+            display: none;
+        }
+        @mixin screen-xxs {
+            display: none;
+        }
+    }
+
+    &__download-divider {
+        padding: calc($grid * 2) calc($grid * 2.5);
+        color: map(colors, grey, 600);
+        font-size: 16px;
+        line-height: 16px;
+        font-weight: 600;
+
+        @mixin screen-sm-down {
+            color: map(colors, grey, 200);
+        }
+
+        @mixin screen-xs {
+            display: none;
+        }
+        @mixin screen-xxs {
+            display: none;
+        }
+    }
+}
+
+.browser_ie11 {
+    .hero {
+        &__welcome-container {
+            margin-top: calc($grid * 14 + 7px + 1px);
+
+            @mixin screen-sm-to-xs {
+                margin-top: calc($grid * 33 + 2px);
+            }
+            @mixin screen-xxs {
+                margin-top: calc($grid * 18 + 1px + 1px);
+            }
+        }
+
+        &__welcome-subtitle {
+            margin-top: calc($grid * 3 - 2px);
+            margin-bottom: calc($grid * 4 + 11px);
+            line-height: 23px;
+
+            @mixin screen-sm-to-xs {
+                margin-top: calc($grid * 7 + 1px);
+            }
+            @mixin screen-xxs {
+                margin-top: calc($grid * 5 - 2px);
+            }
+        }
+
+    }
+}

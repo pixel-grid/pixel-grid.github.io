@@ -195,6 +195,18 @@ module.exports = {
 
         new HtmlWebpackPlugin({
             template: 'html/index.html',
+            filename: 'index.html',
+            minify: !isDebug
+                ? {
+                      collapseWhitespace: true,
+                      removeComments: true
+                  }
+                : false
+        }),
+
+        new HtmlWebpackPlugin({
+            template: 'html/404.html',
+            filename: '404.html',
             minify: !isDebug
                 ? {
                       collapseWhitespace: true,
