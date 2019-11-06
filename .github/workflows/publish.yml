@@ -30,9 +30,12 @@ jobs:
       run: npm run build
     - name: Publish
       if: success()
-      uses: crazy-max/ghaction-github-pages@v1
+      uses: crazy-max/ghaction-github-pages@f9f3f30a16cddca57ef4e3df0b01ed823c1c1355
       with:
         target_branch: master
         build_dir: dist
+        commit_name: PixelGrid CI
+        commit_email: pixelgrid@zwezdin.com
+        commit_message: Automated deploy
       env:
         GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
